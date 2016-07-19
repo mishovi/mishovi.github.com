@@ -694,6 +694,10 @@
 			var newDate = new Date(2016, 8, 17);
 			$('#countdown-ex1').countdown({until: newDate});
 		});
+		jQuery(document).ready( function($){
+			var newDate = new Date(2016, 8, 17);
+			$('#countdown-ex2').countdown({until: newDate});
+		});
 		jQuery(window).load(function(){
 			var t=setTimeout(function(){
 				$( '.flexslider .slide' ).resize();
