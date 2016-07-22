@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="hr-HR">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Srdjan Romcevic" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<!-- Document Title
+	============================================= -->
+	<title>Gallery | Mishovi</title>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="full-header">
+
+			<div id="header-wrap">
+
+				<div class="container clearfix">
+
+					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+					<!-- Logo
+					============================================= -->
+					<div id="logo">
+						<a href="index.html" class="standard-logo" data-dark-logo="images/mishovi_logo_dark.png"><img src="images/mishovi_logo.png" alt="Canvas Logo"></a>
+						<a href="index.html" class="retina-logo" data-dark-logo="images/mishovi_logo_dark@2x.png"><img src="images/mishovi_logo@2x.png" alt="Canvas Logo"></a>
+					</div><!-- #logo end -->
+				</div>
+			</div>
+		</header>
+
+		<!-- Page Title
+		============================================= -->
+		<section id="page-title">
+
+			<div class="container clearfix">
+				<h1>Galerija</h1>
+				<ol class="breadcrumb">
+					<li><a href="index.html">Početna</a></li>
+					<li class="active">Galerija</li>
+				</ol>
+			</div>
+
+		</section><!-- #page-title end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap">
+
+				<div class="container clearfix">
+					<div id="instagram" class="widget clearfix">
+
+						<h4 class="highlight-me">Instagram Feed - #MishoWeDo</h4>
+						<div id="instagram-photos" class="instagram-photos masonry-thumbs col-3" data-tag="morning" data-count="15" data-type="tag"></div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container center clearfix">
+
+					Copyrights &copy; 2016 All Rights Reserved by Iva i Igor<br>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/spectragram.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<script type="text/javascript">
+	jQuery.fn.spectragram.accessData = {
+		accessToken: '0f77bb7272364d1bb41424bf09608f74',
+		clientID: 'c955e4ee941441449e85d9194a4d2bb3'
+	};
+
+	$('instagram-photos').spectragram({
+		query: 'srdjanmatea',
+		max: 14,
+		size: 'big',
+		wrapEachWith: '<p></p>',
+		complete: alert('Done!');
+	});
+	</script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="js/functions.js"></script>
+
+</body>
+</html>
