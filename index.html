@@ -791,15 +791,18 @@
 
 	</script>
 
+	// <script type="text/javascript">
+	// 	$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+	// 		mixpanel.identify(data.ip);
+	// 	});
+	// </script>
+
 	<script type="text/javascript">
 		$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
 			mixpanel.identify(data.ip);
-		});
-	</script>
-
-	<script type="text/javascript">
-		mixpanel.track("HR Page loaded", {
-				"Date": new Date().toLocaleString()
+			mixpanel.track("HR Page loaded", {
+					"Date": new Date().toLocaleString()
+			});
 		});
 	</script>
 

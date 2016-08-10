@@ -804,17 +804,20 @@
 
 	</script>
 
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
-			// console.log(data.ip);
+			console.log(data.ip);
 			mixpanel.identify(data.ip);
 		});
-	</script>
+	</script> -->
 
 	<script type="text/javascript">
+	$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+		mixpanel.identify(data.ip);
 		mixpanel.track("EN Page loaded", {
 				"Date": new Date().toLocaleString()
 		});
+	});
 	</script>
 
 	<!-- fetch entered email -->
