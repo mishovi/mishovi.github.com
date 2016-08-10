@@ -610,7 +610,7 @@
 								<div class="form-process"></div>
 
 								<div class="col_full">
-									<input type="text" name="email" id="wedding-rsvp-email" required="true" class="form-control required email input-lg" placeholder="Your email address *">
+									<input type="text" name="email" id="wedding-rsvp-email" required="true" onblur="retrieveEnteredEmail();" class="form-control required email input-lg" placeholder="Your email address *">
 								</div>
 
 								<div class="col_half">
@@ -649,7 +649,7 @@
 								</div>
 
 								<div class="col_full nobottommargin center">
-									<button type="submit" name="wedding-rsvp-submit" id="wedding-rsvp-submit" onclick="mixpanel.track('RSVP click EN', {'Date': new Date().toLocaleString()});" class="button button-3d btn-block nomargin button-dark button-xlarge" value="submit">RSVP</button>
+									<button type="submit" name="wedding-rsvp-submit" id="wedding-rsvp-submit" onclick="retrieveEnteredData(); mixpanel.track('RSVP click EN', {'Date': new Date().toLocaleString()});" class="button button-3d btn-block nomargin button-dark button-xlarge" value="submit">RSVP</button>
 									<small style="display: block; font-size: 13px; margin-top: 15px;">Please let us know by the end of August.</small>
 								</div>
 
@@ -805,11 +805,38 @@
 	</script>
 
 	<script type="text/javascript">
+		$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+			// console.log(data.ip);
+			mixpanel.identify(data.ip);
+		});
+	</script>
+
+	<script type="text/javascript">
 		mixpanel.track("EN Page loaded", {
 				"Date": new Date().toLocaleString()
 		});
 	</script>
-	
+
+	<!-- fetch entered email -->
+	<script type="text/javascript">
+		function retrieveEnteredEmail() {
+			mixpanel.people.set({
+				'$email': $('#wedding-rsvp-email').val()
+			});
+		}
+	</script>
+
+	<!-- fetch entered data -->
+	<script type="text/javascript">
+		function retrieveEnteredData() {
+			mixpanel.people.set({
+				'$email': $('#wedding-rsvp-email').val(),
+				'$first_name': $('#wedding-rsvp-name').val(),
+				'$last_name': $('#wedding-rsvp-surname').val(),
+			});
+		}
+	</script>
+
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
