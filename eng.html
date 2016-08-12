@@ -808,7 +808,12 @@
 				allowedFileTypes: ["image", "video"]
 			});
 		});
+	</script>
 
+	<script type="text/javascript">
+	$(document).on("keypress", ":input:not(textarea):not([type=submit])", function(event) {
+		return event.keyCode != 13;
+	});
 	</script>
 
 	<!-- <script type="text/javascript">
