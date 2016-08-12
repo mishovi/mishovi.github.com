@@ -819,21 +819,21 @@
 	});
 	</script>
 
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 	$(document).on('ready', function() {
 		$('#wedding-rsvp-form').submit(function() {
-			// submit the form
 			try {
     		$(this).ajaxSubmit();
+				return false;
 			}
 			catch(err) {
 				alert('Problem u komunikaciji sa serverom. :( Ako koristite Safari, pokušajte ponovno nakon refresha, i/ili ugasiti autofill. / Error communicating with server :( If using Safari, try again after refresh and/or disabling autofill.');
+				return false;
 			}
-			// return false to prevent normal browser submit and page navigation
 			return false;
 		});
 	});
-	</script>
+	</script> -->
 
 	<!-- <script type="text/javascript">
 		$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
@@ -868,19 +868,6 @@
 				'$first_name': $('#wedding-rsvp-name').val(),
 				'$last_name': $('#wedding-rsvp-surname').val(),
 			});
-		}
-	</script>
-
-	<!-- submit form -->
-	<script type="text/javascript">
-		function submitData() {
-			try {
-    		https://bigday-mishovi.stamplayapp.com/api/webhook/v1/rsvpen/catch;
-			}
-			catch(err) {
-    		// document.getElementById("demo").innerHTML = err.message;
-				alert('Problem u komunikaciji sa serverom. :( Ako koristite Safari, pokušajte ponovno nakon refresha, i/ili ugasiti autofill. / Error communicating with server :( If using Safari, try again after refresh and/or disabling autofill.');
-			}
 		}
 	</script>
 

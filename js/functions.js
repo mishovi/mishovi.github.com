@@ -3220,7 +3220,7 @@ var SEMICOLON = SEMICOLON || {};
 							},
 							error: function () {
 								// FIXME find out how to set text - data.message treba stajati, privremeno rjesenje
-								elementResult.removeClass( 'alert-danger alert-success' ).addClass( 'alert alert-danger' ).html( 'Problem u komunikaciji sa serverom. :( Ako koristite Safari, pokušajte ponovno nakon refresha, i/ili ugasiti autofill. / Error communicating with server :( If using Safari, try again after refresh and/or disabling autofill.' ).slideDown( 400 );
+								elementResult.removeClass( 'alert-danger alert-success' ).addClass( 'alert alert-danger' ).html( 'Problem u komunikaciji sa serverom. :( <strong>Ako koristite Safari, pokušajte ponovno nakon refresha, i/ili ugasiti autofill.</strong> / Error communicating with server :( <strong>If using Safari, try again after refresh and/or disabling autofill.</strong>' ).slideDown( 400 );
 							}
 						});
 					}
