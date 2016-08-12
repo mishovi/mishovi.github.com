@@ -3217,6 +3217,10 @@ var SEMICOLON = SEMICOLON || {};
 								}
 								if( $(form).find('.g-recaptcha').children('div').length > 0 ) { grecaptcha.reset(); }
 								if( data.alert != 'error' ) { $(form).clearForm(); }
+							},
+							error: function () {
+								// FIXME find out how to set text - data.message treba stajati, privremeno rjesenje
+								elementResult.removeClass( 'alert-danger alert-success' ).addClass( 'alert alert-danger' ).html( 'Problem u komunikaciji sa serverom. :( Ako koristite Safari, pokušajte ponovno nakon refresha, i/ili ugasiti autofill. / Error communicating with server :( If using Safari, try again after refresh and/or disabling autofill.' ).slideDown( 400 );
 							}
 						});
 					}
