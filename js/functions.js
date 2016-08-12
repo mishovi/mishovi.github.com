@@ -3209,8 +3209,8 @@ var SEMICOLON = SEMICOLON || {};
 									} else {
 										var alertType = 'alert-success';
 									}
-
-									elementResult.removeClass( 'alert-danger alert-success' ).addClass( 'alert ' + alertType ).html( data.message ).slideDown( 400 );
+									// FIXME find out how to set text - data.message treba stajati
+									elementResult.removeClass( 'alert-danger alert-success' ).addClass( 'alert ' + alertType ).html( 'Hvala na obavijesti! / Thanks for the RSVP! :)' ).slideDown( 400 );
 								} else {
 									elementResult.attr( 'data-notify-type', data.alert ).attr( 'data-notify-msg', data.message ).html('');
 									SEMICOLON.widget.notifications( elementResult );
