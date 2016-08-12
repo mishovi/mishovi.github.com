@@ -610,7 +610,6 @@
 						</div>
 
 						<div class="contact-widget notopmargin" data-alert-type="inline">
-							<div class="contact-form-result"></div>
 							<!-- https://www.formlets.com/f/574e96dbb283a04f1ac42e84/submit https://bigday.stamplayapp.com/api/webhook/v1/rsvp/catch -->
 							<form id="wedding-rsvp-form" action="https://bigday-mishovi.stamplayapp.com/api/webhook/v1/rsvpen/catch" method="POST" autocomplete="false" class="bottommargin-lg divcenter" style="max-width: 600px;" role="form">
 
@@ -655,6 +654,7 @@
 									<input type="text" id="wedding-rsvp-owner" name="wedding-rsvp-owner" value="fa1209d12" class="form-control" />
 								</div>
 
+								<div class="contact-form-result" style="display: block;"></div>
 								<div class="col_full nobottommargin center">
 									<button type="submit" name="wedding-rsvp-submit" id="wedding-rsvp-submit" onclick="retrieveEnteredData(); mixpanel.track('RSVP click EN', {'Date': new Date().toLocaleString()});" class="button button-3d btn-block nomargin button-dark button-xlarge" value="submit">RSVP</button>
 									<small style="display: block; font-size: 13px; margin-top: 15px;">Please let us know by the end of August.</small>
